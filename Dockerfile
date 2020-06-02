@@ -1,7 +1,7 @@
 # start with the alpine linux tomcat image
 FROM tomcat:8.5-jdk8-openjdk
 
-# switch to the CATALINA_HOME directory sdasdas
+# switch to the CATALINA_HOME directory 
 WORKDIR $CATALINA_HOME
 
 ENV url=jdbc:postgresql://akind-database.cby99r2xyn8t.us-east-2.rds.amazonaws.com:5432/postgres
