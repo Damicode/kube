@@ -1,4 +1,4 @@
-# start with the alpine linux tomcat image test real day
+# start with the alpine linux tomcat image SCRUM
 FROM tomcat:8.5-jdk8-openjdk
 
 # switch to the CATALINA_HOME directory 
