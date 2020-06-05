@@ -1,4 +1,4 @@
-# start with the alpine linux tomcat image test
+# start with the alpine linux tomcat image test real day
 FROM tomcat:8.5-jdk8-openjdk
 
 # switch to the CATALINA_HOME directory 
