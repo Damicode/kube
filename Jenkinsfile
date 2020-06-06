@@ -41,51 +41,14 @@ echo "M2_HOME = ${M2_HOME}"
 }
 stage('install'){
         steps{
-            echo " this is the path: ${PATH}"
+          
             sh "mvn clean package"
         }
 }
 
-stage('Test'){
-        steps{
-            
-            sh 'mvn test'
-        }
-}
-
-
-stage('Build the image'){
-
-        steps{
-            script{
-
-                dockerImage = docker.Build dockerRegister + ":$BUILD_NUMBER"
-            }
-        }
-}
-
-stage ('Deploy image to DockerHub'){
-
-        steps{
-            script{
-
-                docker.withResgistry('' , dockerRegisterCrudendtial)
-                dockerImage.push()
-            }
-        }
-
-}
-
-stage ("Remove unUsed docker image"){
-    steps{
-
-        sh "docker rmi $dockerRegistry:$BUILD_NUMBER"
-    }
-}
 
 
 
-}
 
 
 }
