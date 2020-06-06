@@ -29,10 +29,10 @@ stage('Version'){
         }
 }
 
-stage('install'){
+stage('package & install'){
         steps{
           
-            sh " ${MAVEN_HOME}mvn clean package"
+            sh "${MAVEN_HOME}mvn package"
         }
 }
 
