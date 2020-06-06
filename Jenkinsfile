@@ -11,10 +11,7 @@ environment{
     PATH="/opt/maven/apache-maven-3.6.3/bin:$PATH"
  
 }
- tools{
- maven 'maven-3'
 
- }
 stages{
 
 stage ('Clonning from git'){
@@ -31,14 +28,7 @@ stage('Version'){
             sh 'mvn --version'
         }
 }
-stage ("initialize") {
-steps {
-sh '''
-echo "PATH = ${PATH}"
-echo "M2_HOME = ${M2_HOME}"
-'''
-}
-}
+
 stage('install'){
         steps{
           
@@ -49,6 +39,6 @@ stage('install'){
 
 
 
-
+}
 
 }
