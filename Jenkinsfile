@@ -6,7 +6,7 @@ agent any
 
 environment{
     dockerRegister ="damier85/damier-raymond"
-    dockerRegisterCrudendtial ="Mydocker20"
+    dockerRegisterCrudandtial ="Mydocker20"
     dockerImage =""
   
  
@@ -43,6 +43,36 @@ stage('package & install'){
             script{
                 dockerImage = docker.build("${dockerRegister}:dami-image")
             }
+        }
+        
+    }
+    
+    stage("Pushing to Docker")
+        
+    {
+        
+            steps{
+
+                    script
+                    {
+
+                        docker.withRegistry('', dockerRegisterCrudandtial)
+                        {
+
+                            dockerImage.build()
+                        }
+                    }
+            
+                }
+        
+        
+       }
+    
+    stage("clean up or Remove Image"){
+        
+        steps
+        {
+           sh "docker rmi ${dockerRegister}:dami-image" 
         }
         
     }
