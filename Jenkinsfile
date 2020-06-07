@@ -59,7 +59,7 @@ stage('package & install'){
                         docker.withRegistry('', dockerRegisterCrudandtial)
                         {
 
-                            dockerImage.build()
+                            dockerImage.push()
                         }
                     }
             
