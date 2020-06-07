@@ -8,7 +8,7 @@ environment{
     dockerRegister ="damier85/damier-raymond"
     dockerRegisterCrudendtial ="Mydocker20"
     dockerImage =""
-    MAVEN_HOME="/opt/maven/apache-maven-3.6.3/bin/"
+  
  
 }
 
@@ -40,7 +40,9 @@ stage('package & install'){
     stage ("Build the image"){
         steps
         {
-            dockerImage = docker.build("${dockerRegister}:dami-image")
+            script{
+                dockerImage = docker.build("${dockerRegister}:dami-image")
+            }
         }
         
     }
