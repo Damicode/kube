@@ -37,7 +37,13 @@ stage('package & install'){
 }
 
 
-
+    stage ("Build the image"{
+        steps
+        {
+            dockerImage = docker.build(Register ,":dami-image")
+        }
+        
+    }
 
 }
 
