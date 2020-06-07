@@ -32,7 +32,7 @@ stage('Version'){
 stage('package & install'){
         steps{
           
-            sh "${MAVEN_HOME}mvn package"
+            sh "mvn package"
         }
 }
 
@@ -40,7 +40,7 @@ stage('package & install'){
     stage ("Build the image"{
         steps
         {
-            dockerImage = docker.build(Register ,":dami-image")
+            dockerImage = docker.build(Register":dami-image")
         }
         
     }
