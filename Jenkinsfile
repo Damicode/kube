@@ -26,14 +26,14 @@ stage ('Clonning from git'){
 
 stage('Version'){
         steps{
-            sh "${maven}/bin/mvn --version"
+            sh "mvn --version"
         }
 }
 
 stage('package & install'){
         steps{
           
-            sh "${maven}/bin/mvn package"
+            sh "mvn package"
         }
 }
 
