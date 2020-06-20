@@ -8,7 +8,7 @@ environment{
     dockerRegister ="damier85/damier-raymond"
     dockerRegisterCrudandtial ="Mydocker20"
     dockerImage =""
-    
+    maven = tool name: 'maven', type: 'maven'
   
  
 }
@@ -27,7 +27,7 @@ stage ('Clonning from git'){
 stage('Version'){
         steps{
             sh'which maven'
-            sh "mvn --version"
+            sh "${maven}/bin/mvn --version"
         }
 }
 
