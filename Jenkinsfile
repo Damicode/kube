@@ -41,7 +41,7 @@ stage('package & install'){
         steps
         {
             script{
-                dockerImage = docker.build("${dockerRegister}:dami-image")
+               """ dockerImage = docker.build("${dockerRegister}:dami-image")"""
             }
         }
         
@@ -59,7 +59,7 @@ stage('package & install'){
                         docker.withRegistry('', dockerRegisterCrudandtial)
                         {
 
-                            dockerImage.push()
+                          """  dockerImage.push()"""
                         }
                     }
             
@@ -72,7 +72,7 @@ stage('package & install'){
         
         steps
         {
-           sh "docker rmi ${dockerRegister}:dami-image" 
+          """ sh "docker rmi ${dockerRegister}:dami-image" """
         }
         
     }
