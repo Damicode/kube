@@ -31,7 +31,7 @@ stage('Version'){
         }
 }
 
-stage('package & install'){
+stage('package & install 2'){
         steps{
           
             sh "mvn package"
