@@ -71,7 +71,7 @@ stage('package & install'){
         
         steps
         {
-          """ sh "docker rmi ${dockerRegister}:dami-image" """
+        
         }
         
     }
