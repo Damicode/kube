@@ -27,7 +27,7 @@ stage ('Clonning from git'){
 stage('Version'){
         steps{
             sh'which maven'
-            sh "mvn --version"
+            sh "${maven}/bin/mvn --version"
         }
 }
 
