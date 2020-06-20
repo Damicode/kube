@@ -8,7 +8,7 @@ environment{
     dockerRegister ="damier85/damier-raymond"
     dockerRegisterCrudandtial ="Mydocker20"
     dockerImage =""
-    maven = tool name: 'maven', type: 'maven'
+    
   
  
 }
@@ -31,12 +31,7 @@ stage('Version'){
         }
 }
 
-stage('package & install 2'){
-        steps{
-          
-            sh "${maven}/bin/mvn package"
-        }
-}
+
 
 
 
