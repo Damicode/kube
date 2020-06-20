@@ -8,7 +8,7 @@ environment{
     dockerRegister ="damier85/damier-raymond"
     dockerRegisterCrudandtial ="Mydocker20"
     dockerImage =""
-    maven=tool name: 'maven', type: 'maven'
+    maven = tool name: 'maven', type: 'maven'
   
  
 }
