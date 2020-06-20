@@ -37,15 +37,7 @@ stage('package & install'){
 }
 
 
-    stage ("Build the image"){
-        steps
-        {
-            script{
-              
-            }
-        }
-        
-    }
+
     
     stage("Pushing to Docker")
         
