@@ -63,7 +63,7 @@ stage('package & install'){
         
         steps
         {
-        echo "cool"
+        echo "cool s"
         }
         
     }
