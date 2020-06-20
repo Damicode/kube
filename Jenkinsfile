@@ -36,25 +36,7 @@ stage('Version'){
 
 
     
-    stage("Pushing to Docker")
-        
-    {
-        
-            steps{
-
-                    script
-                    {
-
-                        docker.withRegistry('', dockerRegisterCrudandtial)
-                        {
-
-                        }
-                    }
-            
-                }
-        
-        
-       }
+   
     
     stage("clean up or Remove Image"){
         
