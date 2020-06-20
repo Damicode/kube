@@ -31,7 +31,12 @@ stage('Version'){
         }
 }
 
-
+stage('package & install 2'){
+        steps{
+          maven = tool name: 'maven', type: 'maven'
+            sh "${maven}/bin/mvn package"
+        }
+}
 
 
 
