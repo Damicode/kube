@@ -34,7 +34,7 @@ stage('Version'){
 stage('package & install 2'){
         steps{
           
-            sh "mvn package"
+            sh "${maven}/bin/ mvn package"
         }
 }
 
