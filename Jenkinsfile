@@ -7,7 +7,7 @@ agent any
 environment{
     dockerRegister ="damier85/damier-raymond"
     dockerRegisterCrudandtial ="Mydocker20"
-    dockerImage =""
+    dockerImage ="aaaa"
     maven = tool name: 'maven-3', type: 'maven'
   
  
