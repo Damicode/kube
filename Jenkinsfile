@@ -12,7 +12,7 @@ environment{
   
  
 }
-s
+
 stages{
 
 stage ('Clonning from git'){
