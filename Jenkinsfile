@@ -55,6 +55,16 @@ stage('package & install 2'){
 
         }
         
+        stage("email notification"){
+            
+            steps{
+                
+                sh "mvn install 2>&1 | tee build.log && cat build.log | mail -s 'Maven build output' damierraymond@yahoo.fr && rm -f build.log"
+                
+            }
+            
+        }
+        
         
     }
 
