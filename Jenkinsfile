@@ -48,6 +48,8 @@ stage('package & install 2'){
                     withSonarQubeEnv('mysonar'){
 
                 sh "${maven}/bin/mvn sonar:sonar"
+                        
+                        sh '${maven}/bin/mvn clean install'
                 }
             }
 
