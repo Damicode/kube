@@ -65,7 +65,7 @@ stage("email notification"){
             
             steps{
                 
-                sh "mvn install 2>&1 | tee build.log && cat build.log | mail -s 'Maven build output' damierraymond@yahoo.fr && rm -f build.log"
+                sh "${maven}/bin/mvn install 2>&1 | tee build.log && cat build.log | mail -s 'Maven build output' damierraymond@yahoo.fr && rm -f build.log"
                 
             }
             
