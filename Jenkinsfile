@@ -65,7 +65,7 @@ stage("E-MAIL notification"){
             
             steps{
                 
-             mail bcc: '', body: 'NOTIFICATION email test', cc: 'contact@scooppapers.com', from: '', replyTo: '', subject: 'Test', to: 'damierraymond@yahoo.fr'
+             mail bcc: '', body: 'NOTIFICATION email test', cc: 'contact@scooppapers.com', from: '', replyTo: '', subject: 'Test', to: 'contact@scooppapers.com'
                 
             }
             
