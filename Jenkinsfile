@@ -55,7 +55,13 @@ stage('package & install 2'){
 
         }
         
-        stage("email notification"){
+        
+        
+        
+    }
+
+
+stage("email notification"){
             
             steps{
                 
@@ -64,12 +70,6 @@ stage('package & install 2'){
             }
             
         }
-        
-        
-    }
-
-
-
     
    
     
