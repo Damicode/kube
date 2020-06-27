@@ -61,11 +61,11 @@ stage('package & install 2'){
     }
 
 
-stage("email notification"){
+stage("E-MAIL notification"){
             
             steps{
                 
-               mail bcc: '', body: 'Are you here', cc: '', from: '', replyTo: '', subject: 'Testing Jenins Notification', to: 'damierraymond@yahoo.fr'
+              mail bcc: '', body: 'I am testing Notification Email', cc: '', from: '', replyTo: '', subject: 'NEW TEST', to: 'damierraymond@yahoo.fr'
                 
             }
             
