@@ -44,7 +44,7 @@ stage('package & install 2'){
                 script{
                     withSonarQubeEnv('mysonar'){
 
-                sh 'mvn sonar:sonar'
+                sh "${maven}/bin/mvn sonar:sonar"
                 }
             }
 
