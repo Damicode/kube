@@ -39,13 +39,15 @@ stage('package & install 2'){
 }
     stage('scan analysis'){
         
-        steps{
-            
-             withSonarQubeEnv('mysonar'){
-            
-            sh 'mvn sonar:sonar'
-        }
-            
+            steps{
+
+                script{
+                    withSonarQubeEnv('mysonar'){
+
+                sh 'mvn sonar:sonar'
+                }
+            }
+
         }
         
         
