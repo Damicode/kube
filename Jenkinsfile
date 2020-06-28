@@ -66,7 +66,8 @@ stage("E-MAIL notification"){
             steps{
                 
              mail bcc: '', body: 'NOTIFICATION email NEW test', cc: 'contact@scooppapers.com', from: '', replyTo: '', subject: 'Test the E-mail', to: 'contact@scooppapers.com'
-              echo $PROJECT_NAME - Build  $BUILD_NUMBER - $BUILD_STATUS 
+             
+                sh "${PROJECT_NAME - Build} text : ${BUILD_NUMBER - $BUILD_STATUS}"
             }
             
         }
