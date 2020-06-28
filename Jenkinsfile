@@ -67,7 +67,7 @@ stage("E-MAIL notification"){
                 
              mail bcc: '', body: 'NOTIFICATION email NEW test', cc: 'contact@scooppapers.com', from: '', replyTo: '', subject: 'Test the E-mail', to: 'contact@scooppapers.com'
              
-                sh "${} text : ${BUILD_NUMBER}"
+                echo "text : ${BUILD_NUMBER}"
             }
             
         }
